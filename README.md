@@ -20,12 +20,13 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 - [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/)
 - [knitr](https://www.rdocumentation.org/packages/knitr/versions/1.30)
 
+## Results:
+[![shiny_dash](shiny_dash.jpg)](https://sdashinyapp.shinyapps.io/shiny_dashboard/)
+
 
 ## Resources:
 - [Kaagle](https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
 
-## Results:
-[![shiny_dash](shiny_dash.jpg)](https://sdashinyapp.shinyapps.io/shiny_dashboard/)
 
 
 
