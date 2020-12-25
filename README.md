@@ -8,7 +8,7 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 
 
 # Project Tools And Libraries:
-•``R``
+- ``R``
 
 •[billboarder](https://cran.r-project.org/web/packages/billboarder/billboarder.pdf)
 
