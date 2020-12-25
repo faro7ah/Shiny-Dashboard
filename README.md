@@ -7,7 +7,7 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 
 
 
-# Project Tools And Libraries:
+## Project Tools And Libraries:
 - ``R``
 
 - [billboarder](https://cran.r-project.org/web/packages/billboarder/billboarder.pdf)
@@ -21,10 +21,10 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 - [knitr](https://www.rdocumentation.org/packages/knitr/versions/1.30)
 
 
-# Resources:
+## Resources:
 - [Kaagle](https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
 
-# Results:
+## Results:
 (shiny_dash.jpg)
 
 
