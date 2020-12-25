@@ -5,6 +5,7 @@
 
 In this project, we will apply what we've learned on valuable Shiny Dashboard lessons with **R**. We built an interactive dashboard to convey our message in a professional method and attract the audience's attention. We used Covid19 data of North America and all countries all over the world to discover the percentage of Recovery, Deaths, Confirmed cases.
 
+Let's discover more on [ShinnyApps](https://sdashinyapp.shinyapps.io/shiny_dashboard/)
 
 
 ## Project Tools And Libraries:
