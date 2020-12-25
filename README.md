@@ -10,8 +10,8 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 # Project Tools And Libraries:
 •``R``
 
-[billboarder](https://cran.r-project.org/web/packages/billboarder/billboarder.pdf)
-[lubridate](https://lubridate.tidyverse.org/)
+•[billboarder](https://cran.r-project.org/web/packages/billboarder/billboarder.pdf)
+•[lubridate](https://lubridate.tidyverse.org/)
 [shiny](https://shiny.rstudio.com/)
 [rsconnect](https://cran.r-project.org/web/packages/rsconnect/rsconnect.pdf)
 [tidyverse](https://www.tidyverse.org/packages/)
@@ -21,7 +21,7 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 
 
 # Resources:
-- [Kaagle] (https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
+- [Kaagle](https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
 
 # Results:
 (shiny_dash.jpg)
