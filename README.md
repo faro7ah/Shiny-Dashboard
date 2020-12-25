@@ -1,32 +1,36 @@
-# Shiny-Dashboard
-Building Shiny Dashboard CodingDojo
-
 # Coding-Dojo-SQL-project
 
 
 ## Introduction:
 
-
-In this project, we will apply what we've learned on Shainy Dashboard lessons with **R**. We built interactive dashboard to convey our message in professional method and attract audiences attention
-
-> **This project is a part of [Coding Dojo Data Science course](http://learn.codingdojo.com/m/196/6244/46875) under supervision of the [Saudi Digital Academy](https://sda.edu.sa/ar/hemam)**
+In this project, we will apply what we've learned on valuable Shiny Dashboard lessons with **R**. We built an interactive dashboard to convey our message in a professional method and attract the audience's attention. We used Covid19 data of North America and all countries all over the world to discover the percentage of Recovery, Deaths, Confirmed cases.
 
 
-# project Tools:
-•``BlazingSql``: [BlazingSQL](https://docs.blazingdb.com/docs/blazingsql)is a SQL interface for cuDF, with various features to support large scale data science workflows and enterprise datasets.
 
+# Project Tools And Libraries:
+•``R``
 
-•``S3 bucket``: We connect to [S3](https://www.youtube.com/watch?time_continue=9&v=_I14_sXHO8U&feature=emb_title) bucket , and creat taxi table from it.
-
-•``matplotlib``: [Visualization tool.](https://matplotlib.org/)
-
-
-# Describtion of Yellow Taxi Trip Records:
-
-![Yellow Taxi Trip Records](Yellow_taxi.jpg)
-
+[billboarder](https://cran.r-project.org/web/packages/billboarder/billboarder.pdf)
+[lubridate](https://lubridate.tidyverse.org/)
+[shiny](https://shiny.rstudio.com/)
+[rsconnect](https://cran.r-project.org/web/packages/rsconnect/rsconnect.pdf)
+[tidyverse](https://www.tidyverse.org/packages/)
+[dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
+[flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/)
+[knitr](https://www.rdocumentation.org/packages/knitr/versions/1.30)
 
 
 # Resources:
-- https://docs.blazingdb.com/docs/blazingsql
-- https://www.youtube.com/watch?time_continue=9&v=_I14_sXHO8U&feature=emb_title
+- [Kaagle] (https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
+
+# Results:
+(shiny_dash.jpg)
+
+
+
+
+
+
+
+
+
