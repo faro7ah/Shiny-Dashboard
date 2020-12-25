@@ -1,0 +1,172 @@
+---
+title: "Interactive Shiny Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+---
+
+```{r setup, include=FALSE}
+#install.packages('shinydashboard')
+#install.packages('shiny')
+#install.packages('flexdashboard')
+#install.packages('DT')
+#install.packages('rpivotTable')
+#install.packages('openintro')
+#install.packages('highcharter')
+#install.packages('dplyr')
+#install.packages("plotly")
+#install.packages("plotly")
+#install.packages('rsconnect')
+#devtools::install_github('jbkunst/highcharter')
+#install.packages('billboarder')
+#install.packages("lubridate")
+library("billboarder")
+library(lubridate)
+library(shiny)
+library(rsconnect)
+library(plotly)
+library(tidyverse)
+library(dplyr)
+library(flexdashboard)
+library(ggplot2)
+library(DT)
+library(knitr)
+library(rpivotTable)
+library(openintro)
+library(highcharter)
+rsconnect::setAccountInfo(name='sdashinyapp',
+			  token='CADBD0966A9FD383FC57583123E2FC01',
+			  secret='WI2XCgK5mESIBDqq9raE8wdSDtRtoKAhnD/vwwsz')
+```
+
+
+
+```{r}
+data<- read.csv("covid19_northamerica.csv")
+data1 <- read.csv("covid19_world.csv")
+
+```
+
+
+
+```{r}
+mycolors <- c("blue", "FFC125", "lightblue", "purple")
+```
+
+Row 
+---------------------------------
+    
+### Covid-19 Analysis 
+    
+```{r}
+#install.packages("valueBox")
+#library(flexdashboard)
+#library(valueBox)
+
+#install.packages("installr")
+#library("installr")
+#updateR()
+library(flexdashboard)
+valueBox(paste("Covid19"),
+        color="warning")
+```
+
+### Covid19 in North America
+```{r}
+valueBox(length(data$Country_Region),
+         icon = "fa-user")
+```
+
+
+
+### Washington
+```{r}
+valueBox(sum(data$Province_State =="Washington", na.rm = TRUE),
+         icon ='fa-building')
+```
+
+
+### New York
+
+
+```{r}
+valueBox(sum(data$Province_State =="New York", na.rm = TRUE),
+         icon ='fa-building')
+
+```
+
+
+### Florida
+
+
+```{r}
+valueBox(sum(data$Province_State =="Florida", na.rm = TRUE),
+         icon ='fa-building')
+
+```
+
+
+
+### Covid19 around the world
+
+
+```{r}
+
+valueBox(length(data1$Country_Region),
+         icon = 'fa-building')
+
+
+```
+
+
+Row 
+---------------------------------
+### Maximum, Minimum, And Median Active Cases Of Covid-19 Around The World According To Each Particular Month.
+```{r}
+P1 = data1 %>% mutate(MONTH = month(ObservationDate, label = T),
+                     DAY = day(ObservationDate)) %>% 
+  group_by(DAY, MONTH) %>% summarise(CNT = sum(Active))
+hcboxplot(x = P1$CNT, var = P1$MONTH, outliers = F, name = 'Boxplot',
+          color = '#111d5e') 
+                  hcaes(x = MONTH, y = CNT, group = DAY)
+```
+
+Row
+-------------------------------------
+### Covid-19 Cases Rating Around The world
+```{r}
+y = data1 %>%
+  group_by(MONTH = floor_date(ymd(ObservationDate), unit = 'month')) %>%
+  summarise(CNT = n())
+
+z = y %>% mutate(MA = zoo::rollmean(CNT, k = 2, fill = NA, align = 'right'))
+highchart() %>% hc_xAxis(type = 'datetime') %>% 
+  hc_add_series(type = 'line', data = z, hcaes(x = MONTH, y = CNT), name = 'Cases Rting',
+                color = '#98acf8') %>% 
+  hc_add_series(type = 'spline', data = z, hcaes(x = MONTH, y = MA),
+                name = 'Moving Average', color = '#0a043c')
+```
+
+
+```{r}
+y = data1 %>% 
+  mutate(date = ymd(ObservationDate),
+                                   tz = 'UTC') %>% 
+  filter(!is.na(date) & Recovered!=0) %>%
+  mutate(DAY = day(date), MONTH = month(date, label = TRUE)) %>%
+  group_by(DAY, MONTH) %>% 
+  summarize(CNT = sum(Recovered))
+hchart(y, 'heatmap', hcaes(x = DAY, y = MONTH, value = CNT))
+```
+
+### Recovery Percentage Of Covid-19 In 'China', 'United Kingdom', 'US', 'Italy', 'France', 'Saudi Arabia','Egypt', And 'Algeria'.
+
+```{r}
+y = data1 %>% filter(Country_Region %in% c('United Kingdom','China', 'US', 'Italy', 'France', 'Saudi Arabia','Egypt', 'Algeria')) %>% 
+  group_by(Country_Region) %>% 
+  summarise(CNT = sum(Recovered))
+billboarder() %>% bb_piechart(y) %>% bb_legend(position = 'right') %>%
+bb_color(palette = c('#b088f9','#d0e8f2','#52BCA3','#99C945','#CC61B0',
+                     'A6A9B6','0E49B5', '8DB596'))
+```
