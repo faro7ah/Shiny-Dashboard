@@ -1,4 +1,4 @@
-# Coding-Dojo-SQL-project
+# Coding-Dojo-Shiny-Dashboard
 
 
 ## Introduction:
@@ -25,7 +25,7 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 - [Kaagle](https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
 
 ## Results:
-(shiny_dash.jpg)
+[![shiny_dash](shiny_dash.jpg)](https://sdashinyapp.shinyapps.io/shiny_dashboard/)
 
 
 
