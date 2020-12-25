@@ -10,15 +10,15 @@ In this project, we will apply what we've learned on valuable Shiny Dashboard le
 # Project Tools And Libraries:
 - ``R``
 
-•[billboarder](https://cran.r-project.org/web/packages/billboarder/billboarder.pdf)
+- [billboarder](https://cran.r-project.org/web/packages/billboarder/billboarder.pdf)
 
-•[lubridate](https://lubridate.tidyverse.org/)
-[shiny](https://shiny.rstudio.com/)
-[rsconnect](https://cran.r-project.org/web/packages/rsconnect/rsconnect.pdf)
-[tidyverse](https://www.tidyverse.org/packages/)
-[dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
-[flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/)
-[knitr](https://www.rdocumentation.org/packages/knitr/versions/1.30)
+- [lubridate](https://lubridate.tidyverse.org/)
+- [shiny](https://shiny.rstudio.com/)
+- [rsconnect](https://cran.r-project.org/web/packages/rsconnect/rsconnect.pdf)
+- [tidyverse](https://www.tidyverse.org/packages/)
+- [dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html)
+- [flexdashboard](https://rmarkdown.rstudio.com/flexdashboard/)
+- [knitr](https://www.rdocumentation.org/packages/knitr/versions/1.30)
 
 
 # Resources:
