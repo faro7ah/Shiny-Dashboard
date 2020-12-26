@@ -26,7 +26,7 @@ Let's discover more on [ShinnyApps](https://sdashinyapp.shinyapps.io/shiny_dashb
 
 
 ## Resources:
-- [Kaagle](https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
+- [Kaggle](https://www.kaggle.com/okwirjulius/covid19-cases-in-africa)
 - [byollin shinyapps](https://byollin.shinyapps.io/VisionZero/)
 - [ShinyApps](https://www.shinyapps.io/)
 
